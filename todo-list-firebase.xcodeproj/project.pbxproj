@@ -18,6 +18,8 @@
 		3E856D742B18337A009614EA /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D732B18337A009614EA /* AuthManager.swift */; };
 		3E856D762B183509009614EA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D752B183509009614EA /* AuthView.swift */; };
 		3E856D792B1836D0009614EA /* SignUpWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D782B1836D0009614EA /* SignUpWithEmailView.swift */; };
+		3E856D7B2B1849FC009614EA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D7A2B1849FC009614EA /* MainView.swift */; };
+		3E856D7D2B185821009614EA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D7C2B185821009614EA /* LoginEmailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3E856D732B18337A009614EA /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		3E856D752B183509009614EA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		3E856D782B1836D0009614EA /* SignUpWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailView.swift; sourceTree = "<group>"; };
+		3E856D7A2B1849FC009614EA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3E856D7C2B185821009614EA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 			children = (
 				3E856D782B1836D0009614EA /* SignUpWithEmailView.swift */,
 				3E856D752B183509009614EA /* AuthView.swift */,
+				3E856D7A2B1849FC009614EA /* MainView.swift */,
+				3E856D7C2B185821009614EA /* LoginEmailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E856D5F2B1830E1009614EA /* ContentView.swift in Sources */,
+				3E856D7B2B1849FC009614EA /* MainView.swift in Sources */,
+				3E856D7D2B185821009614EA /* LoginEmailView.swift in Sources */,
 				3E856D742B18337A009614EA /* AuthManager.swift in Sources */,
 				3E856D792B1836D0009614EA /* SignUpWithEmailView.swift in Sources */,
 				3E856D762B183509009614EA /* AuthView.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  SignUpWithEmailView.swift
+//  LoginEmailView.swift
 //  todo-list-firebase
 //
 //  Created by magistra aptam on 30/11/23.
@@ -7,37 +7,37 @@
 
 import SwiftUI
 
-final class SignUpViewModel: ObservableObject {
-    
+final class LoginEmailViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     
-    func signUpUser()async throws{
+    func userLogin() async throws {
         guard !email.isEmpty, !password.isEmpty else {
-            print("email or password not found!")
+            print("Missing email or password")
             return
         }
-        try await AuthManager.shared.createNewUser(email: email, password: password)
+        
+        try await AuthManager.shared.userLogin(email: email, password: password)
     }
 }
 
-struct SignUpWithEmailView: View {
+struct LoginEmailView: View {
+    @StateObject var loginVM = LoginEmailViewModel()
     @Binding var showSignView: Bool
-    @StateObject var signUpVM = SignUpViewModel()
     var body: some View {
         VStack{
-            TextField("Email...", text: $signUpVM.email)
+            TextField("Email...", text: $loginVM.email)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
-            SecureField("Password", text: $signUpVM.password)
+            SecureField("Password", text: $loginVM.password)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
             Button {
                 Task{
                     do{
-                        try await signUpVM.signUpUser()
+                        try await loginVM.userLogin()
                         showSignView = false
                         print("success")
                     }catch{
@@ -55,14 +55,12 @@ struct SignUpWithEmailView: View {
             Spacer()
         }
         .padding()
-        .navigationTitle("Sign up with email")
+        .navigationTitle("Log in with email")
     }
 }
 
-struct SignUpWithEmailView_Previews: PreviewProvider {
+struct LoginEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            SignUpWithEmailView(showSignView: .constant(true))
-        }
+        LoginEmailView(showSignView: .constant(false))
     }
 }

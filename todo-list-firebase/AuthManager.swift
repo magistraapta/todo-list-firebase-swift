@@ -27,9 +27,29 @@ class AuthManager{
     
     let firebaseAuth = Auth.auth()
     
+    func getAuthUser() throws -> AuthDataResultModel{
+        guard let currentUser = firebaseAuth.currentUser else {
+            throw URLError(.badServerResponse)
+        }
+        
+        return AuthDataResultModel(user: currentUser)
+    }
+    
+    @discardableResult
     func createNewUser(email: String, password: String) async throws -> AuthDataResultModel {
         
         let authDataResult = try await firebaseAuth.createUser(withEmail: email, password: password)
         return AuthDataResultModel(user: authDataResult.user)
     }
+    
+    func userSignOut() throws {
+        try firebaseAuth.signOut()
+    }
+    
+    @discardableResult
+    func userLogin(email: String, password: String) async throws -> AuthDataResultModel {
+        let userLogin = try await firebaseAuth.signIn(withEmail: email, password: password)
+        return AuthDataResultModel(user: userLogin.user)
+    }
+    
 }
