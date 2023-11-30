@@ -20,6 +20,8 @@
 		3E856D792B1836D0009614EA /* SignUpWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D782B1836D0009614EA /* SignUpWithEmailView.swift */; };
 		3E856D7B2B1849FC009614EA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D7A2B1849FC009614EA /* MainView.swift */; };
 		3E856D7D2B185821009614EA /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D7C2B185821009614EA /* LoginEmailView.swift */; };
+		3E856D7F2B185C6F009614EA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D7E2B185C6F009614EA /* UserManager.swift */; };
+		3E856D832B18613A009614EA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E856D822B18613A009614EA /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3E856D782B1836D0009614EA /* SignUpWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailView.swift; sourceTree = "<group>"; };
 		3E856D7A2B1849FC009614EA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3E856D7C2B185821009614EA /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
+		3E856D7E2B185C6F009614EA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		3E856D822B18613A009614EA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				3E856D772B1836BF009614EA /* Views */,
 				3E856D5C2B1830E1009614EA /* todo_list_firebaseApp.swift */,
 				3E856D5E2B1830E1009614EA /* ContentView.swift */,
+				3E856D7E2B185C6F009614EA /* UserManager.swift */,
 				3E856D732B18337A009614EA /* AuthManager.swift */,
 				3E856D712B18332F009614EA /* GoogleService-Info.plist */,
 				3E856D602B1830E3009614EA /* Assets.xcassets */,
@@ -95,6 +100,7 @@
 				3E856D752B183509009614EA /* AuthView.swift */,
 				3E856D7A2B1849FC009614EA /* MainView.swift */,
 				3E856D7C2B185821009614EA /* LoginEmailView.swift */,
+				3E856D822B18613A009614EA /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,8 +188,10 @@
 				3E856D7B2B1849FC009614EA /* MainView.swift in Sources */,
 				3E856D7D2B185821009614EA /* LoginEmailView.swift in Sources */,
 				3E856D742B18337A009614EA /* AuthManager.swift in Sources */,
+				3E856D832B18613A009614EA /* SettingsView.swift in Sources */,
 				3E856D792B1836D0009614EA /* SignUpWithEmailView.swift in Sources */,
 				3E856D762B183509009614EA /* AuthView.swift in Sources */,
+				3E856D7F2B185C6F009614EA /* UserManager.swift in Sources */,
 				3E856D5D2B1830E1009614EA /* todo_list_firebaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

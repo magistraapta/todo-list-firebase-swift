@@ -7,34 +7,14 @@
 
 import SwiftUI
 
-final class SettingsViewModel: ObservableObject {
-    
-    func userLogOut() throws {
-        try AuthManager.shared.userSignOut()
-    }
-    
-}
-
 struct MainView: View {
     @State var showSignView: Bool = false
-    @StateObject var settingVM = SettingsViewModel()
+   
     var body: some View {
         VStack {
-            List {
-                Button {
-                    Task{
-                        do{
-                            try settingVM.userLogOut()
-                            showSignView = true
-                        }catch{
-                            print(error)
-                        }
-                    }
-                } label: {
-                    Text("Log out")
-                }
-            }
+            Text("hello world")
         }
+        .navigationTitle("Profile")
         .onAppear{
             let currentUser = try? AuthManager.shared.getAuthUser()
             self.showSignView = currentUser == nil
@@ -44,11 +24,22 @@ struct MainView: View {
                 AuthView(showSignView: $showSignView)
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing){
+                NavigationLink {
+                    SettingsView(showSignView: $showSignView)
+                } label: {
+                    Image(systemName: "gear")
+                }
+            }
+        }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        NavigationStack {
+            MainView()
+        }
     }
 }
